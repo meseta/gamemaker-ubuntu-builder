@@ -1,0 +1,14 @@
+include:
+  - project: 'meseta-projects/infrastructure/ci-templates'
+    ref: v20211025
+    file:
+      - 'common.yaml'
+      - 'build_docker.yaml'
+
+build docker:
+  extends: .build docker
+  stage: build
+  variables:
+    IMAGE_NAME: us.gcr.io/meseta/space-mmo/infrastructure/gamemaker-ubuntu-builder
+  only:
+  - tags
