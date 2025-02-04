@@ -1,0 +1,6 @@
+services:
+  build:
+    image: meseta/gmbuilder:v1.1.0
+    build:
+      dockerfile: Dockerfile
+   
